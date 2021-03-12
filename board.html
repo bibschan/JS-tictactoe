@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+        }
+        td {
+            width: 100px;
+            height: 100px;
+        }
+        div {
+            /* margin-top: auto;
+            margin-bottom: auto; */
+            width: fit-content;
+        }
+        table {
+            margin: 5px auto;
+        }
+        .vert {
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+        }
+        .hori {
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+        .o {
+            background-image: url('./assets/o-icon.png');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .x {
+            background-image: url('./assets/x-icon.png');
+            background-position: center;
+            background-size: cover;
+
+        }
+    </style>
+</head>
+<body>
+  <div>
+    <table>
+        <tr>
+          <td id="00"></td>
+          <td id="01" class="vert"></td>
+          <td id="02"></td>
+        </tr>
+        <tr>
+          <td id="10" class="hori"></td>
+          <td id="11" class="vert hori"></td>
+          <td id="12" class="hori"></td>
+        </tr>
+        <tr>
+          <td id="20"></td>
+          <td id="21" class="vert"></td>
+          <td id="22"></td>
+        </tr>
+      </table>
+    </div>
+</body>
+
+<script src="./tictactoe.js"></script>
+</html>
