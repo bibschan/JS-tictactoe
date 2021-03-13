@@ -115,8 +115,12 @@ class Board {
             attachPlayer.classList.add(game.activePlayer);
 
             if(game.checkForWin(row, column)){
-                alert((game.activePlayer === 'x' ? 'Cool Cat' : 'Chilling Doge') + ' won!')
-                game.resetBoard();
+                setTimeout(() => {
+                    alert((game.activePlayer === 'x' ? 'Cool Cat' : 'Chilling Doge') + ' won!')
+                    game.resetBoard();
+                }, 250);
+                
+                
             }
         } else {
             alert('this box is not available')
