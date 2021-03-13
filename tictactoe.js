@@ -65,10 +65,22 @@ class Board {
                 count++
             }
         }
-
         if(count === 3){
             return true;
-        }        
+        } 
+
+        // check diagonals
+        if(this.getBoxState(0, 0) === this.activePlayer && 
+           this.getBoxState(1, 1) === this.activePlayer &&
+           this.getBoxState(2, 2) === this.activePlayer){
+             return true;
+        }
+        // check the other diagonal
+        if(this.getBoxState(0, 2) === this.activePlayer && 
+           this.getBoxState(1, 1) === this.activePlayer &&
+           this.getBoxState(2, 0) === this.activePlayer){
+             return true;
+        }
 
         this.switchPlayer();
 
